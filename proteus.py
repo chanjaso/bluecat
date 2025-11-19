@@ -64,13 +64,6 @@ def delete(fqdn):
 				return 1
 	return 0
 
-def delete_lamp_site(domain):
-	hosts   = ['www','ftp','m','webmail','admin','mail','','']
-
-        for host in hosts:
-                fqdn    = (host + '.' + domain)
-                delete(fqdn)
-
 def add_host(fqdn,rdata,ttl):
         parent = get_viewinfo()
         if verbose:
